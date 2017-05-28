@@ -8,7 +8,9 @@ class sekolah extends CI_Controller  {
 	public function index()
 	{
 		//Function yang digunakan untuk menampilkan view products_view.php
-		$data['jumlahallsekolah'] = $this->sekolah_model->getdatasekolah();
+		$data['jumlahallsekolah'] = $this->sekolah_model->getalldatasekolah();
+		$data['jumlahallsiswa'] = $this->sekolah_model->getalldatasiswa();
+		$data['jumlahallguru'] = $this->sekolah_model->getalldataguru();
 		$this->load->view('sekolah_view', $data); //menampilkan view 'products_view' dan juga passing data dengan nama $data(Bentuknya array) yang berisi 'listProducts'
 	}
 
