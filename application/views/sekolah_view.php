@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="en" class="no-js">
     <!-- BEGIN HEAD -->
     <head>
@@ -143,34 +142,26 @@
         <script src="assets/js/components/wow.min.js" type="text/javascript"></script>
         <script src="assets/js/components/swiper.min.js" type="text/javascript"></script>
         <script src="assets/js/components/masonry.min.js" type="text/javascript"></script>
-=======
+
 <html>
 <head>
 	<title></title>
 </head>
 <body>
->>>>>>> 1d300dc607e2b7704072937640df64ae02178dc1
+
 <?php
 	$row=$jumlahallsekolah->result();
 	$row1=$jumlahallsiswa->result();
 	$row2=$jumlahallguru->result();
 ?>
-<<<<<<< HEAD
 <table class = "table table-condensed">
-=======
-<table border="1">
->>>>>>> 1d300dc607e2b7704072937640df64ae02178dc1
+
 	<tr>
 		<th>Jenjang</th>
 		<th>Sekolah</th>
 		<th>Peserta Didik</th>
 		<th>Rombel</th>
 		<th>Guru</th>
-		<th>Tendik</th>
-<<<<<<< HEAD
-=======
-		<th>Jumlah Kirim</th>
->>>>>>> 1d300dc607e2b7704072937640df64ae02178dc1
 	</tr>
 	<tr>
 		<td><?php echo $row[3]->jenjang ?></td>
@@ -230,7 +221,6 @@
 	</tr>
 </table>
 
-<<<<<<< HEAD
 <a href='<?php echo base_url ('sekolah/kecamatan/61'); ?>'>Berbah</a><br>
 <a href='<?php echo base_url ('sekolah/kecamatan/62'); ?>'>Cangkringan</a><br>
 <a href='<?php echo base_url ('sekolah/kecamatan/63'); ?>'>Depok</a><br>
@@ -251,7 +241,5 @@
 
 <a href='<?php echo base_url ('sekolah/guru_kec/61'); ?>'>Guru Berbah</a><br>
 
-=======
->>>>>>> 1d300dc607e2b7704072937640df64ae02178dc1
 </body>
 </html>

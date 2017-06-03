@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class sekolah extends CI_Controller  {
 
 	function __construct(){
@@ -9,26 +8,13 @@ class sekolah extends CI_Controller  {
 
 	}
 
-	function index()
-=======
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class sekolah extends CI_Controller  {
-	function __construct(){
-		parent::__construct();
-		$this->load->model("sekolah_model"); //constructor yang dipanggil ketika memanggil products.php untuk melakukan pemanggilan pada model : products_model.php yang ada di folder models
-	}
-
-	public function index()
->>>>>>> 1d300dc607e2b7704072937640df64ae02178dc1
-	{
+	function index(){
 		//Function yang digunakan untuk menampilkan view products_view.php
 		$data['jumlahallsekolah'] = $this->sekolah_model->getalldatasekolah();
 		$data['jumlahallsiswa'] = $this->sekolah_model->getalldatasiswa();
 		$data['jumlahallguru'] = $this->sekolah_model->getalldataguru();
 		$this->load->view('sekolah_view', $data); //menampilkan view 'products_view' dan juga passing data dengan nama $data(Bentuknya array) yang berisi 'listProducts'
 	}
-
-<<<<<<< HEAD
 	function kecamatan(){
 		$this->load->view('v_kec');
 	}
@@ -60,13 +46,11 @@ class sekolah extends CI_Controller  {
 	}
 
 
-=======
 	public function addAnggota()
 	{
 		//Function yang dipanggil ketika ingin melakukan add produk kemudian menampilkan add_product_view
 		$this->load->view('add_anggota_view');
 	}
->>>>>>> 1d300dc607e2b7704072937640df64ae02178dc1
 }
 
 /* Location: ./application/controllers/anggota.php */

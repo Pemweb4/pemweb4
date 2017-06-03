@@ -24,7 +24,6 @@
 			$this->db->group_by('profil.jenjang');
 			return $this->db->get();
 		}
-<<<<<<< HEAD
 
 		function getprofil($npsn){
 			$this->db->select('*');
@@ -47,7 +46,5 @@
 		function guruperkel($kec){
 			return $this->db->query("select count(d2.nama_guru) as jumlah_guru from profil p join data_guru d1 on p.npsn=d1.npsn left outer join data_guru d2 on p.npsn=d2.npsn and p.kec in (61) group by p.jenjang, d1.jk");
 		}
-=======
->>>>>>> 1d300dc607e2b7704072937640df64ae02178dc1
 	}
 ?>
