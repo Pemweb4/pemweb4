@@ -43,8 +43,8 @@
 		function guru($kec){
 			return $this->db->query("select profil.jenjang, count(data_guru.nama_guru) as jumlah_guru from profil left outer join data_guru on profil.npsn=data_guru.npsn and profil.kec in (61) group by profil.jenjang");
 		}
-		function guruperkel($kec){
-			return $this->db->query("select count(d2.nama_guru) as jumlah_guru from profil p join data_guru d1 on p.npsn=d1.npsn left outer join data_guru d2 on p.npsn=d2.npsn and p.kec in (61) group by p.jenjang, d1.jk");
+		function guruperkel($kec, $jen){
+			return $this->db->query("select p.jenjang, d2.jk, count(d2.nama_guru) as jumlah_guru from profil p left outer join data_guru d2 on p.npsn=d2.npsn and p.jenjang in ('".$jen."') and p.kec in (61) group by d2.jk");
 		}
 	}
 ?>
