@@ -2,6 +2,7 @@
 <html lang="en" class="no-js">
     <!-- BEGIN HEAD -->
     <head>
+        <base href="<?php echo base_url(); ?>">
         <meta charset="utf-8"/>
         <title>Data Sekolah</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,7 +45,7 @@
 
                         <!-- Logo -->
                         <div class="logo">
-                            <a class="logo-wrap" href="index.html">
+                            <a class="logo-wrap" href="#">
                                 <img class="logo-img logo-img-main" src="assets/img/tut.png" style="width: 60px;height: 60px">
                             </a>
                         </div>
@@ -55,7 +56,7 @@
                     <div class="collapse navbar-collapse" id="contoh">
                             <ul class="navbar-nav navbar-nav-left">
                                 <li >
-                                    <a class= "nav-item-child nav-item-hover active" href="index.html">HOME</a>
+                                    <a class= "nav-item-child nav-item-hover active" href="<?=base_url()?>sekolah/index">HOME</a>
                                 </li>
 
                                 <li class="dropdown">
@@ -290,108 +291,108 @@
                                         <li class="dropdown-submenu">
                                             <a href="">Kab Bantul</a>
                                              <ul class="dropdown-menu">
-                                                <li><a href="data-sekolah.html">Bambanglipuro</a></li>
-                                                <li><a href="#">Bangutapan</a></li>
-                                                <li><a href="#">Bantul</a></li>
-                                                <li><a href="#">Dlingo</a></li>
-                                                <li><a href="#">Imogiri</a></li>
-                                                <li><a href="#">Jetis</a></li>
-                                                <li><a href="#">Kasihan</a></li>
-                                                <li><a href="#">Kretek</a></li>
-                                                <li><a href="#">Pajangan</a></li>
-                                                <li><a href="#">Pandak</a></li>
-                                                <li><a href="#">Piyungan</a></li>
-                                                <li><a href="#">Pleret</a></li>
-                                                <li><a href="#">Pundong</a></li>
-                                                <li><a href="#">Sanden</a></li>
-                                                <li><a href="#">Sedayu</a></li>
-                                                <li><a href="#">Sewon</a></li>
-                                                <li><a href="#">Srandakan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/8'); ?>">Bambanglipuro</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/13'); ?>">Bangutapan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/11'); ?>">Bantul</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/5'); ?>">Dlingo</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/4'); ?>">Imogiri</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/7'); ?>">Jetis</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/16'); ?>">Kasihan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/2'); ?>">Kretek</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/10'); ?>">Pajangan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/9'); ?>">Pandak</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/14'); ?>">Piyungan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/6'); ?>">Pleret</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/3'); ?>">Pundong</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/1'); ?>">Sanden</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/15'); ?>">Sedayu</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/12'); ?>">Sewon</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/17'); ?>">Srandakan</a></li>
                                             </ul>
                                         </li>
 
                                         <li class="dropdown-submenu">
                                             <a href="">Kab Sleman</a>
                                              <ul class="dropdown-menu">
-                                                <li><a href="#">Berbah</a></li>
-                                                <li><a href="#">Cangkringan</a></li>
-                                                <li><a href="#">Depok</a></li>
-                                                <li><a href="#">Gamping</a></li>
-                                                <li><a href="#">Godean</a></li>
-                                                <li><a href="#">Kalasan</a></li>
-                                                <li><a href="#">Minggir</a></li>
-                                                <li><a href="#">Mlati</a></li>
-                                                <li><a href="#">Moyudan</a></li>
-                                                <li><a href="#">Ngaglik</a></li>
-                                                <li><a href="#">Ngemplak</a></li>
-                                                <li><a href="#">Pakem</a></li>
-                                                <li><a href="#">Prambanan</a></li>
-                                                <li><a href="#">Sayegan</a></li>
-                                                <li><a href="#">Sleman</a></li>
-                                                <li><a href="#">Tempel</a></li>
-                                                <li><a href="#">Turi</a></li>
+                                               <li><a href="<?php echo base_url ('sekolah/guru_kec/61'); ?>">Berbah</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/62'); ?>">Cangkringan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/63'); ?>">Depok</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/64'); ?>">Gamping</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/65'); ?>">Godean</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/66'); ?>">Kalasan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/67'); ?>">Minggir</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/68'); ?>">Mlati</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/69'); ?>">Moyudan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/70'); ?>">Ngaglik</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/71'); ?>">Ngemplak</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/72'); ?>">Pakem</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/73'); ?>">Prambanan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/74'); ?>">Sayegan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/75'); ?>">Sleman</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/76'); ?>">Tempel</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/77'); ?>">Turi</a></li>
                                             </ul>
                                         </li>
 
                                         <li class="dropdown-submenu">
                                             <a href="">Kota Yogyakarta</a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="#">Danurejan</a></li>
-                                                <li><a href="#">Gedongtengen</a></li>
-                                                <li><a href="#">Gondokusuman</a></li>
-                                                <li><a href="#">Gondomanan</a></li>
-                                                <li><a href="#">Jetis</a></li>
-                                                <li><a href="#">Kotagede</a></li>
-                                                <li><a href="#">Kraton</a></li>
-                                                <li><a href="#">Mantrijeron</a></li>
-                                                <li><a href="#">Mergangsan</a></li>
-                                                <li><a href="#">Ngampilan</a></li>
-                                                <li><a href="#">Pakualaman</a></li>
-                                                <li><a href="#">Tegalrejo</a></li>
-                                                <li><a href="#">Umbulharjo</a></li>
-                                                <li><a href="#">Wirobrajan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/78'); ?>">Danurejan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/79'); ?>">Gedongtengen</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/80'); ?>">Gondokusuman</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/81'); ?>">Gondomanan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/82'); ?>">Jetis</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/83'); ?>">Kotagede</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/84'); ?>">Kraton</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/85'); ?>">Mantrijeron</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/86'); ?>">Mergangsan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/87'); ?>">Ngampilan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/88'); ?>">Pakualaman</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/89'); ?>">Tegalrejo</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/90'); ?>">Umbulharjo</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/91'); ?>">Wirobrajan</a></li>
                                             </ul>
                                         </li>
 
                                         <li class="dropdown-submenu">
                                             <a href="">Kab Kulon progo</a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="#">Galur</a></li>
-                                                <li><a href="#">Girimulyo</a></li>
-                                                <li><a href="#">Kalibawang</a></li>
-                                                <li><a href="#">Kokap</a></li>
-                                                <li><a href="#">Lendah</a></li>
-                                                <li><a href="#">Nanggulan</a></li>
-                                                <li><a href="#">Panjatan</a></li>
-                                                <li><a href="#">Pengasih</a></li>
-                                                <li><a href="#">Samigaluh</a></li>
-                                                <li><a href="#">Sentolo</a></li>
-                                                <li><a href="#">Temon</a></li>
-                                                <li><a href="#">Wates</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/50'); ?>">Galur</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/49'); ?>">Girimulyo</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/51'); ?>">Kalibawang</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/52'); ?>">Kokap</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/53'); ?>">Lendah</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/54'); ?>">Nanggulan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/55'); ?>">Panjatan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/56'); ?>">Pengasih</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/57'); ?>">Samigaluh</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/58'); ?>">Sentolo</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/59'); ?>">Temon</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/60'); ?>">Wates</a></li>
                                             </ul>
                                         </li>
 
                                         <li class="dropdown-submenu">
                                             <a href="">Kab Gunungkidul</a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="#">Gedangsari</a></li>
-                                                <li><a href="#">Girisubo</a></li>
-                                                <li><a href="#">Karangmojo</a></li>
-                                                <li><a href="#">Ngawen</a></li>
-                                                <li><a href="#">Nglipar</a></li>
-                                                <li><a href="#">Paliyan</a></li>
-                                                <li><a href="#">Panggang</a></li>
-                                                <li><a href="#">Patuk</a></li>
-                                                <li><a href="#">Playen</a></li>
-                                                <li><a href="#">Ponjong</a></li>
-                                                <li><a href="#">Purwosari</a></li>
-                                                <li><a href="#">Rongkop</a></li>
-                                                <li><a href="#">Sabtosari</a></li>
-                                                <li><a href="#">Semanu</a></li>
-                                                <li><a href="#">Semen</a></li>
-                                                <li><a href="#">Tanjungsari</a></li>
-                                                <li><a href="#">Tepus</a></li>
-                                                <li><a href="#">Wonosari</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/18'); ?>">Gedangsari</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/19'); ?>">Girisubo</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/20'); ?>">Karangmojo</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/21'); ?>">Ngawen</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/22'); ?>">Nglipar</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/23'); ?>">Paliyan</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/24'); ?>">Panggang</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/25'); ?>">Patuk</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/26'); ?>">Playen</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/27'); ?>">Ponjong</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/28'); ?>">Purwosari</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/29'); ?>">Rongkop</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/30'); ?>">Sabtosari</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/31'); ?>">Semanu</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/32'); ?>">Semen</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/34'); ?>">Tanjungsari</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/35'); ?>">Tepus</a></li>
+                                                <li><a href="<?php echo base_url ('sekolah/guru_kec/36'); ?>">Wonosari</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -415,155 +416,3 @@
                 </div>
             </nav>
         </header>
-        <!--========== END HEADER ==========-->
-
-        <!--========== SLIDER ==========-->
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <div class="container">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                </ol>
-            </div>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img class="img-responsive" src="assets/img/banner.png" alt="Slider Image">
-                    <div class="container">
-                        <div class="carousel-centered">
-                            <div class="margin-b-40">
-                                <h1 class="carousel-title">SELAMAT DATANG</h1>
-                                <p>Lorem ipsum dolor amet consectetur adipiscing dolore magna aliqua <br/> enim minim estudiat veniam siad venumus dolore</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img class="img-responsive" src="assets/img/banner1.png" alt="Slider Image">
-                    <div class="container">
-                        <div class="carousel-centered">
-                            <div class="margin-b-40">
-                                <h2 class="carousel-title">SELAMAT DATANG</h2>
-                                <p>Lorem ipsum dolor amet consectetur adipiscing dolore magna aliqua <br/> enim minim estudiat veniam siad venumus dolore</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--========== SLIDER ==========-->
-
-        <!--========== PAGE LAYOUT ==========-->
-        <!-- Service -->
-        
-        <!-- End Service -->
-
-        
-
-
-        <!-- Back To Top -->
-        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
-
-        <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
-        <!-- CORE PLUGINS -->
-        <script src="assets/vendor/jquery.min.js" type="text/javascript"></script>
-        <script src="assets/vendor/jquery-migrate.min.js" type="text/javascript"></script>
-        <script src="assets/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-
-        <!-- PAGE LEVEL PLUGINS -->
-        <script src="assets/vendor/jquery.easing.js" type="text/javascript"></script>
-        <script src="assets/vendor/jquery.back-to-top.js" type="text/javascript"></script>
-        <script src="assets/vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
-        <script src="assets/vendor/jquery.wow.min.js" type="text/javascript"></script>
-        <script src="assets/vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
-        <script src="assets/vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
-        <script src="assets/vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
-
-        <!-- PAGE LEVEL SCRIPTS -->
-        <script src="assets/js/layout.min.js" type="text/javascript"></script>
-        <script src="assets/js/components/wow.min.js" type="text/javascript"></script>
-        <script src="assets/js/components/swiper.min.js" type="text/javascript"></script>
-        <script src="assets/js/components/masonry.min.js" type="text/javascript"></script>
-
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-
-<?php
-	$row=$jumlahallsekolah->result();
-	$row1=$jumlahallsiswa->result();
-	$row2=$jumlahallguru->result();
-?>
-<table class = "table table-condensed" style="width : 80%; margin-top : 50px; margin-left : 130px" >
-
-	<tr>
-		<th>Jenjang</th>
-		<th>Sekolah</th>
-		<th>Peserta Didik</th>
-		<th>Rombel</th>
-		<th>Guru</th>
-	</tr>
-	<tr>
-		<td><?php echo $row[3]->jenjang ?></td>
-		<td><?php echo $row[3]->jumlah ?></td>
-		<td><?php echo $row1[3]->jumlah_siswa ?></td>
-		<td><?php echo $row1[3]->rombel ?></td>
-		<td><?php echo $row2[3]->jumlah_guru ?></td>
-	</tr>
-	<tr>
-		<td><?php echo $row[1]->jenjang ?></td>
-		<td><?php echo $row[1]->jumlah ?></td>
-		<td><?php echo $row1[1]->jumlah_siswa ?></td>
-		<td><?php echo $row1[1]->rombel ?></td>
-		<td><?php echo $row2[1]->jumlah_guru ?></td>
-	</tr>
-	<tr>
-		<td><?php echo $row[7]->jenjang ?></td>
-		<td><?php echo $row[7]->jumlah ?></td>
-		<td><?php echo $row1[7]->jumlah_siswa ?></td>
-		<td><?php echo $row1[7]->rombel ?></td>
-		<td><?php echo $row2[7]->jumlah_guru ?></td>
-	</tr>
-	<tr>
-		<td><?php echo $row[2]->jenjang ?></td>
-		<td><?php echo $row[2]->jumlah ?></td>
-		<td><?php echo $row1[2]->jumlah_siswa ?></td>
-		<td><?php echo $row1[2]->rombel ?></td>
-		<td><?php echo $row2[2]->jumlah_guru ?></td>
-	</tr>
-	<tr>
-		<td><?php echo $row[5]->jenjang ?></td>
-		<td><?php echo $row[5]->jumlah ?></td>
-		<td><?php echo $row1[5]->jumlah_siswa ?></td>
-		<td><?php echo $row1[5]->rombel ?></td>
-		<td><?php echo $row2[5]->jumlah_guru ?></td>
-	</tr>
-	<tr>
-		<td><?php echo $row[6]->jenjang ?></td>
-		<td><?php echo $row[6]->jumlah ?></td>
-		<td><?php echo $row1[6]->jumlah_siswa ?></td>
-		<td><?php echo $row1[6]->rombel ?></td>
-		<td><?php echo $row2[6]->jumlah_guru ?></td>
-	</tr>
-	<tr>
-		<td><?php echo $row[0]->jenjang ?></td>
-		<td><?php echo $row[0]->jumlah ?></td>
-		<td><?php echo $row1[0]->jumlah_siswa ?></td>
-		<td><?php echo $row1[0]->rombel ?></td>
-		<td><?php echo $row2[0]->jumlah_guru ?></td>
-	</tr>
-	<tr>
-		<td><?php echo $row[4]->jenjang ?></td>
-		<td><?php echo $row[4]->jumlah ?></td>
-		<td><?php echo $row1[4]->jumlah_siswa ?></td>
-		<td><?php echo $row1[4]->rombel ?></td>
-		<td><?php echo $row2[4]->jumlah_guru ?></td>
-	</tr>
-</table>
-
-</body>
-</html>

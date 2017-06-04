@@ -35,6 +35,19 @@
         <?php
             $row=$this->uri->segment(3);
         ?>
+        <center>
+        <a href="<?=base_url()?>sekolah/sekolah_kec/<?=$row?>/SD/MI">
+                <img src="assets/img/sd.png" style="width: 100px;height: 100px; margin-top: 20px; margin-right: 80px">
+        </a>
+        <a href="<?=base_url()?>sekolah/sekolah_kec/<?=$row?>/SMP/MTS">
+                <img src="assets/img/smp.png" style="width: 100px;height: 100px; margin-top: 20px;margin-right: 80px">
+        </a>
+        <a href="<?=base_url()?>sekolah/sekolah_kec/<?=$row?>/SMA/SMK">
+                <img src="assets/img/sma.png" style="width: 100px;height: 100px; margin-top: 20px">
+        </a>
+
+        </center>
+
         
 
         <!-- Back To Top -->
@@ -60,34 +73,31 @@
         <script src="assets/js/components/swiper.min.js" type="text/javascript"></script>
         
 <?php
-	$row=$profil->result();
-	$jjg='';
+        $row=$profil->result();
 ?>
-<table class = "table table-condensed">
-	<tr>
-		<th>Jenjang</th>
-		<th>Jumlah Laki-laki</th>
-		<th>Jumlah Perempuan</th>
-		<th>Total</th>
-	</tr>
-	<?php foreach ($row as $r) { 
-		/*if ($r->jenjang=='SMP' or $r->jenjang=='MTS') {
-			$jjg = 'SMP/MTS';
-		}elseif ($r->jenjang=='SMA' or $r->jenjang=='SMK') {
-			$jjg = 'SMA/SMK';
-		}else{
-			$jjg = 'SD/MI';
-		}*/
-
-	?>
-	<tr>
-		<td><a href="<?=base_url()?>sekolah/sekolah_kec_guru/<?=$r->kec?>/<?=$r->jenjang?>"><?php echo $r->jenjang ?></td>
-		<td><?php echo $r->laki ?></td>
-		<td><?php echo $r->perempuan ?></td>
-		<td><?php echo $r->jumlah_guru ?></td>
-	</tr>
-	<?php } ?>
+<table class="table">
+        <tr>
+                <th>No</th>
+                <th>NPSN</th>
+                <th>Nama Sekolah</th>
+                <th>Alamat</th>
+                <th>Telepon</th>
+                <th>Email</th>
+        </tr>
+        <?php 
+                $no = 1;
+                foreach($row as $u){ 
+                ?>
+                <tr>
+                        <td><?php echo $no++ ?></td>
+                        <td><?php echo $u->npsn ?></td>
+                        <td><a href="<?=base_url()?>sekolah/profil/<?=$u->npsn?>"><?php echo $u->nama_sekolah ?></a></td>
+                        <td><?php echo $u->alamat ?></td>
+                        <td><?php echo $u->telepon ?></td>
+                        <td><?php echo $u->email ?></td>
+                </tr>
+        <?php } ?>
 </table>
-	
+
 </body>
 </html>

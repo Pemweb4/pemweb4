@@ -789,6 +789,10 @@ fieldset[disabled] .btn-theme {
   .header .navbar-nav-right {
     float: right;
   }
+
+  .header .navbar-nav-left {
+    float: left;
+  }x
 }
 
 /* Page On Scroll */
@@ -1559,4 +1563,68 @@ fieldset[disabled] .btn-theme {
 
 .height-400 {
   height: 400px !important;
+}
+
+/*--------------------------------------------------
+    [Dropdown]
+----------------------------------------------------*/
+
+.dropdown-submenu {
+  position: relative; 
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu .dropdown-menu {
+  left: 100%;
+  top: 0; 
+}
+.dropdown-submenu .pull-left {
+  float: none;
+}
+
+.transparan2{background:rgba(0,0,0,0.4);}
+
+.table {
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-right: 100px;
+  color: #232323;
+  border-collapse: collapse;
+  position: relative;
+  width: 85%;
+}
+.table tr th{
+    background: #35A9DB;
+    color: #fff;
+    font-weight: normal;
+}
+ 
+.table, th, td {
+    padding: 8px 10px;
+    text-align: center;
+}
+ 
+.table tr:hover {
+    background-color: #f5f5f5;
+}
+ 
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 }

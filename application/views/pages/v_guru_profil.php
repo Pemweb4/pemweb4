@@ -60,34 +60,33 @@
         <script src="assets/js/components/swiper.min.js" type="text/javascript"></script>
         
 <?php
-	$row=$profil->result();
-	$jjg='';
+        $row=$profil->result();
 ?>
-<table class = "table table-condensed">
-	<tr>
-		<th>Jenjang</th>
-		<th>Jumlah Laki-laki</th>
-		<th>Jumlah Perempuan</th>
-		<th>Total</th>
-	</tr>
-	<?php foreach ($row as $r) { 
-		/*if ($r->jenjang=='SMP' or $r->jenjang=='MTS') {
-			$jjg = 'SMP/MTS';
-		}elseif ($r->jenjang=='SMA' or $r->jenjang=='SMK') {
-			$jjg = 'SMA/SMK';
-		}else{
-			$jjg = 'SD/MI';
-		}*/
-
-	?>
-	<tr>
-		<td><a href="<?=base_url()?>sekolah/sekolah_kec_guru/<?=$r->kec?>/<?=$r->jenjang?>"><?php echo $r->jenjang ?></td>
-		<td><?php echo $r->laki ?></td>
-		<td><?php echo $r->perempuan ?></td>
-		<td><?php echo $r->jumlah_guru ?></td>
-	</tr>
-	<?php } ?>
+<table class="table">
+        <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>NIP</th>
+                <th>Bidang</th>
+                <th>Sertifikasi</th>
+                <th>Status Pegawai</th>
+                <th>Alamat</th>
+        </tr>
+        <?php 
+                $no = 1;
+                foreach($row as $u){ 
+                ?>
+                <tr>
+                        <td><?php echo $no++ ?></td>
+                        <td><?php echo $u->nama_guru ?></td>
+                        <td><?php echo $u->nip ?></td>
+                        <td><?php echo $u->bidang ?></td>
+                        <td><?php echo $u->sertifikasi_guru ?></td>
+                        <td><?php echo $u->sts_pegawai ?></td>
+                        <td><?php echo $u->alamat ?></td>
+                </tr>
+        <?php } ?>
 </table>
-	
+
 </body>
 </html>

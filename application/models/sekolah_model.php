@@ -25,6 +25,31 @@
 			return $this->db->get();
 		}
 
+		function getdatasekolah($kec) {
+			//select semua data yang ada pada table msProduct $this--->db->select("*");
+			$this->db->select('jenjang, count(npsn) as jumlah');
+			$this->db->from('profil');
+			$this->db->where('kec',$kec);
+			$this->db->group_by('jenjang');
+			return $this->db->get();
+		}
+		function getdatasiswa($kec){
+			$this->db->select('sum(siswa.jumlah_siswa) as jumlah_siswa, sum(siswa.rombel) as rombel');
+			$this->db->from('profil');
+			$this->db->where('kec',$kec);
+			$this->db->join('siswa','profil.npsn=siswa.npsn');
+			$this->db->group_by('profil.jenjang');
+			return $this->db->get();
+		}
+		function getdataguru($kec){
+			$this->db->select("profil.jenjang,profil.kec,count(data_guru.nama_guru) as jumlah_guru, sum(case when jk = 'L' then 1 else 0 end) as laki, sum(case when jk = 'P' then 1 else 0 end) as perempuan", FALSE);
+			$this->db->from('profil');
+			$this->db->join('data_guru','profil.npsn=data_guru.npsn');
+			$this->db->where('profil.kec',$kec);
+			$this->db->group_by('profil.jenjang');
+			return $this->db->get();
+		}
+
 		function getprofil($npsn){
 			$this->db->select('*');
 			$this->db->from('profil');
@@ -32,7 +57,20 @@
 			return $this->db->get();
 		}
 
-		function getsekolah_kec($kec,$jenjang){
+		function getsekolah_kec($kec,$jenjang,$jenjang1){
+			$ma = 'MA';
+			$this->db->select('*');
+			$this->db->from('profil');
+			$this->db->where('kec',$kec);
+			if ($jenjang=='SMA') {
+				$this->db->where('(`jenjang` LIKE \'%'.$jenjang.'%\' OR `jenjang` LIKE \'%'.$jenjang1.'%\' OR `jenjang` LIKE \'%'.$ma.'%\')', NULL, FALSE);
+			}else{
+				$this->db->where('(`jenjang` LIKE \'%'.$jenjang.'%\' OR `jenjang` LIKE \'%'.$jenjang1.'%\')', NULL, FALSE);
+			}
+			return $this->db->get();
+		}
+
+		function getsekolah_kec_guru($kec,$jenjang){
 			$this->db->select('*');
 			$this->db->from('profil');
 			$this->db->where('kec',$kec);
@@ -40,11 +78,12 @@
 			return $this->db->get();
 		}
 
-		function guru($kec){
-			return $this->db->query("select profil.jenjang, count(data_guru.nama_guru) as jumlah_guru from profil left outer join data_guru on profil.npsn=data_guru.npsn and profil.kec in (61) group by profil.jenjang");
+		function getgurusek ($npsn){
+			$this->db->select('*');
+			$this->db->from('data_guru');
+			$this->db->where('npsn',$npsn);
+			return $this->db->get();
 		}
-		function guruperkel($kec){
-			return $this->db->query("select count(d2.nama_guru) as jumlah_guru from profil p join data_guru d1 on p.npsn=d1.npsn left outer join data_guru d2 on p.npsn=d2.npsn and p.kec in (61) group by p.jenjang, d1.jk");
-		}
+
 	}
 ?>

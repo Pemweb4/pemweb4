@@ -35,6 +35,19 @@
         <?php
             $row=$this->uri->segment(3);
         ?>
+        <center>
+        <a href="<?=base_url()?>sekolah/sekolah_kec/<?=$row?>/SD/MI">
+        	<img src="assets/img/sd.png" style="width: 100px;height: 100px; margin-top: 20px; margin-right: 80px">
+        </a>
+        <a href="<?=base_url()?>sekolah/sekolah_kec/<?=$row?>/SMP/MTS">
+        	<img src="assets/img/smp.png" style="width: 100px;height: 100px; margin-top: 20px;margin-right: 80px">
+        </a>
+        <a href="<?=base_url()?>sekolah/sekolah_kec/<?=$row?>/SMA/SMK">
+        	<img src="assets/img/sma.png" style="width: 100px;height: 100px; margin-top: 20px">
+        </a>
+
+        </center>
+
         
 
         <!-- Back To Top -->
@@ -58,36 +71,38 @@
         <script src="assets/js/layout.min.js" type="text/javascript"></script>
         <script src="assets/js/components/wow.min.js" type="text/javascript"></script>
         <script src="assets/js/components/swiper.min.js" type="text/javascript"></script>
-        
+
+    </body>
+    <!-- END BODY -->
+</html>
+
 <?php
-	$row=$profil->result();
-	$jjg='';
+	$row0=$jumlahsekolah->result();
+	$row1=$jumlahsiswa->result();
+	$row2=$jumlahguru->result();
 ?>
-<table class = "table table-condensed">
+<table class = "table table-condensed" style="width : 80%; margin-top : 50px; margin-left : 130px" >
+
 	<tr>
 		<th>Jenjang</th>
-		<th>Jumlah Laki-laki</th>
-		<th>Jumlah Perempuan</th>
-		<th>Total</th>
+		<th>Sekolah</th>
+		<th>Peserta Didik</th>
+		<th>Rombel</th>
+		<th>Guru</th>
 	</tr>
-	<?php foreach ($row as $r) { 
-		/*if ($r->jenjang=='SMP' or $r->jenjang=='MTS') {
-			$jjg = 'SMP/MTS';
-		}elseif ($r->jenjang=='SMA' or $r->jenjang=='SMK') {
-			$jjg = 'SMA/SMK';
-		}else{
-			$jjg = 'SD/MI';
-		}*/
-
-	?>
+	<?php
+	$no = -1;
+	foreach ($row0 as $a) { $no++ ?>
 	<tr>
-		<td><a href="<?=base_url()?>sekolah/sekolah_kec_guru/<?=$r->kec?>/<?=$r->jenjang?>"><?php echo $r->jenjang ?></td>
-		<td><?php echo $r->laki ?></td>
-		<td><?php echo $r->perempuan ?></td>
-		<td><?php echo $r->jumlah_guru ?></td>
+		<td><?php echo $a->jenjang ?></td>
+		<td><?php echo $a->jumlah ?></td>
+		<td><?php echo $row1[$no]->jumlah_siswa ?></td>
+		<td><?php echo $row1[$no]->rombel ?></td>
+		<td><?php echo $row2[$no]->jumlah_guru ?></td>
 	</tr>
 	<?php } ?>
-</table>
 	
+</table>
+
 </body>
-</html>
+</html> 
