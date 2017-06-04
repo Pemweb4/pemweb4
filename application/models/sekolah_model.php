@@ -77,18 +77,14 @@
 			$this->db->where('jenjang',$jenjang);
 			return $this->db->get();
 		}
-<<<<<<< HEAD
 		function guruperkel($kec, $jen){
 			return $this->db->query("select p.jenjang, d2.jk, count(d2.nama_guru) as jumlah_guru from profil p left outer join data_guru d2 on p.npsn=d2.npsn and p.jenjang in ('".$jen."') and p.kec in (61) group by d2.jk");
-=======
 
 		function getgurusek ($npsn){
 			$this->db->select('*');
 			$this->db->from('data_guru');
 			$this->db->where('npsn',$npsn);
 			return $this->db->get();
->>>>>>> 91299a4456408d59883dccefa6f488bc4f95641e
 		}
 
 	}
-?>

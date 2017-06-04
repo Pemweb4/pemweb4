@@ -56,7 +56,6 @@ class sekolah extends CI_Controller  {
 	function guru_kec()
 	{
 		$kec = $this->uri->segment(3);
-<<<<<<< HEAD
 		$data['profil'] = $this->sekolah_model->guru($kec);
 		$data['guruperkelsd'] = $this->sekolah_model->guruperkel($kec, 'SD');
 		$data['guruperkelmi'] = $this->sekolah_model->guruperkel($kec, 'MI');
@@ -66,10 +65,8 @@ class sekolah extends CI_Controller  {
 		$data['guruperkelsmk'] = $this->sekolah_model->guruperkel($kec, 'SMK');
 		$data['guruperkelma'] = $this->sekolah_model->guruperkel($kec, 'MA');
 		$data['guruperkelslb'] = $this->sekolah_model->guruperkel($kec, 'SLB');
-=======
 		$data['profil'] = $this->sekolah_model->getdataguru($kec);
 		$this->load->view('templates/header');
->>>>>>> 91299a4456408d59883dccefa6f488bc4f95641e
 		$this->load->view('v_guru_kec',$data);
 	}
 
@@ -79,8 +76,7 @@ class sekolah extends CI_Controller  {
 		$this->load->view('templates/header');
 		$this->load->view('pages/v_guru_profil',$data);
 	}
-
-
+	
 	public function addAnggota()
 	{
 		//Function yang dipanggil ketika ingin melakukan add produk kemudian menampilkan add_product_view
