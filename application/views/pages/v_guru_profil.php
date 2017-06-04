@@ -60,94 +60,33 @@
         <script src="assets/js/components/swiper.min.js" type="text/javascript"></script>
         
 <?php
-	$row=$profil->result();
-<<<<<<< HEAD
-	$row1=$guruperkelsd->result();
-	$row2=$guruperkelmi->result();
-	$row3=$guruperkelsmp->result();
-	$row4=$guruperkelmts->result();
-	$row5=$guruperkelsma->result();
-	$row6=$guruperkelsmk->result();
-	$row7=$guruperkelma->result();
-	$row8=$guruperkelslb->result();
-=======
-	$jjg='';
->>>>>>> 91299a4456408d59883dccefa6f488bc4f95641e
+        $row=$profil->result();
 ?>
-<table class = "table table-condensed">
-	<tr>
-		<th>Jenjang</th>
-		<th>Jumlah Laki-laki</th>
-		<th>Jumlah Perempuan</th>
-		<th>Total</th>
-	</tr>
-	<?php foreach ($row as $r) { 
-		/*if ($r->jenjang=='SMP' or $r->jenjang=='MTS') {
-			$jjg = 'SMP/MTS';
-		}elseif ($r->jenjang=='SMA' or $r->jenjang=='SMK') {
-			$jjg = 'SMA/SMK';
-		}else{
-			$jjg = 'SD/MI';
-		}*/
-
-	?>
-	<tr>
-<<<<<<< HEAD
-		<td><?php echo $row[3]->jenjang ?></td>
-		<td><?php echo $row1[0]->jumlah_guru ?></td>
-		<td><?php echo $row1[1]->jumlah_guru ?></td>
-		<td><?php echo $row[3]->jumlah_guru ?></td>
-	</tr>
-	<tr>
-		<td><?php echo $row[1]->jenjang ?></td>
-		<td><?php echo $row2[0]->jumlah_guru ?></td>
-		<td><?php echo $row2[1]->jumlah_guru ?></td>
-		<td><?php echo $row[1]->jumlah_guru ?></td>
-	</tr>
-	<tr>
-		<td><?php echo $row[7]->jenjang ?></td>
-		<td><?php echo $row3[0]->jumlah_guru ?></td>
-		<td><?php echo $row3[1]->jumlah_guru ?></td>
-		<td><?php echo $row[7]->jumlah_guru ?></td>
-	</tr>
-	<tr>
-		<td><?php echo $row[2]->jenjang ?></td>
-		<td><?php echo $row4[0]->jumlah_guru ?></td>
-		<td><?php echo $row4[1]->jumlah_guru ?></td>
-		<td><?php echo $row[2]->jumlah_guru ?></td>
-	</tr>
-	<tr>
-		<td><?php echo $row[5]->jenjang ?></td>
-		<td><?php echo $row5[0]->jumlah_guru ?></td>
-		<td><?php echo $row5[1]->jumlah_guru ?></td>
-		<td><?php echo $row[5]->jumlah_guru ?></td>
-	</tr>
-	<tr>
-		<td><?php echo $row[6]->jenjang ?></td>
-		<td><?php echo $row6[0]->jumlah_guru ?></td>
-		<td><?php echo $row6[1]->jumlah_guru ?></td>
-		<td><?php echo $row[6]->jumlah_guru ?></td>
-	</tr>
-	<tr>
-		<td><?php echo $row[0]->jenjang ?></td>
-		<td><?php echo $row7[0]->jumlah_guru ?></td>
-		<td><?php echo $row7[1]->jumlah_guru ?></td>
-		<td><?php echo $row[0]->jumlah_guru ?></td>
-	</tr>
-	<tr>
-		<td><?php echo $row[4]->jenjang ?></td>
-		<td><?php echo $row8[0]->jumlah_guru ?></td>
-		<td><?php echo $row8[1]->jumlah_guru ?></td>
-		<td><?php echo $row[4]->jumlah_guru ?></td>
-=======
-		<td><a href="<?=base_url()?>sekolah/sekolah_kec_guru/<?=$r->kec?>/<?=$r->jenjang?>"><?php echo $r->jenjang ?></td>
-		<td><?php echo $r->laki ?></td>
-		<td><?php echo $r->perempuan ?></td>
-		<td><?php echo $r->jumlah_guru ?></td>
->>>>>>> 91299a4456408d59883dccefa6f488bc4f95641e
-	</tr>
-	<?php } ?>
+<table class="table">
+        <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>NIP</th>
+                <th>Bidang</th>
+                <th>Sertifikasi</th>
+                <th>Status Pegawai</th>
+                <th>Alamat</th>
+        </tr>
+        <?php 
+                $no = 1;
+                foreach($row as $u){ 
+                ?>
+                <tr>
+                        <td><?php echo $no++ ?></td>
+                        <td><?php echo $u->nama_guru ?></td>
+                        <td><?php echo $u->nip ?></td>
+                        <td><?php echo $u->bidang ?></td>
+                        <td><?php echo $u->sertifikasi_guru ?></td>
+                        <td><?php echo $u->sts_pegawai ?></td>
+                        <td><?php echo $u->alamat ?></td>
+                </tr>
+        <?php } ?>
 </table>
-	
+
 </body>
 </html>
