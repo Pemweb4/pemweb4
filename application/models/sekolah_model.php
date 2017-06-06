@@ -170,6 +170,10 @@
 
 		}
 
+		function getsiswa($kec){
+			return $this->db->query('select p.jenjang, ifnull(sum(s.jumlah_putra), 0) as jumlah_putra, ifnull(sum(s.jumlah_putri), 0) as jumlah_putri,  ifnull(sum(s.jumlah_siswa), 0) as jumlah_siswa FROM profil p left outer join siswa s on p.npsn=s.npsn and p.kec in (67) group by p.jenjang');
+		}
+
 
 
 	}

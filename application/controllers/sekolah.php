@@ -136,7 +136,13 @@ class sekolah extends CI_Controller  {
 
 	}
 
+	function siswa_kec(){
+		$kec = $this->uri->segment(3);
 
+		$data['siswa'] = $this->sekolah_model->getsiswa($kec);
+
+		$this->load->view('v_murid_kec', $data);
+	}
 
 
 
@@ -149,6 +155,8 @@ class sekolah extends CI_Controller  {
 		$this->load->view('add_anggota_view');
 
 	}
+
+
 
 }
 
