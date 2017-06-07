@@ -1,0 +1,11 @@
+body{
+	background: #EBEBEB;
+
+}
+.jumbotron{
+	width: 50%;
+}
+
+.login button{
+	width: 150px;
+}

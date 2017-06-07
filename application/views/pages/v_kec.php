@@ -35,6 +35,9 @@
         <?php
             $row=$this->uri->segment(3);
         ?>
+
+        <center><h2>DATA SEKOLAH</h2></center>
+
         <center>
         <a href="<?=base_url()?>sekolah/sekolah_kec/<?=$row?>/SD/MI">
         	<img src="assets/img/sd.png" style="width: 100px;height: 100px; margin-top: 20px; margin-right: 80px">
@@ -72,6 +75,7 @@
         <script src="assets/js/components/wow.min.js" type="text/javascript"></script>
         <script src="assets/js/components/swiper.min.js" type="text/javascript"></script>
 
+
     </body>
     <!-- END BODY -->
 </html>
@@ -80,7 +84,9 @@
 	$row0=$jumlahsekolah->result();
 	$row1=$jumlahsiswa->result();
 	$row2=$jumlahguru->result();
+    $kec = $namakec->result();
 ?>
+<p style="padding-left: 10% ">Kecamatan <?php echo $kec[0]->nama_kec ?></p>
 <table class = "table table-condensed" style="width : 80%; margin-top : 50px; margin-left : 130px" >
 
 	<tr>

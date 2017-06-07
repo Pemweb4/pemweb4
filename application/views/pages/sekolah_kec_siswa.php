@@ -36,7 +36,7 @@
             $row=$this->uri->segment(3);
         ?>
         
-        <center><h2>DATA GURU</h2></center>
+		<center><h2>DATA SEKOLAH</h2></center>
         <!-- Back To Top -->
         <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
 
@@ -58,35 +58,34 @@
         <script src="assets/js/layout.min.js" type="text/javascript"></script>
         <script src="assets/js/components/wow.min.js" type="text/javascript"></script>
         <script src="assets/js/components/swiper.min.js" type="text/javascript"></script>
-        
+
 <?php
-        $row=$profil->result();
+
+            $r=$this->uri->segment(3);
+
 ?>
-<table class="table">
-        <tr>
-                <th>No</th>
-                <th>Nama</th>
-                <th>NIP</th>
-                <th>Bidang</th>
-                <th>Sertifikasi</th>
-                <th>Status Pegawai</th>
-                <th>Alamat</th>
-        </tr>
-        <?php 
-                $no = 1;
-                foreach($row as $u){ 
-                ?>
-                <tr>
-                        <td><?php echo $no++ ?></td>
-                        <td><?php echo $u->nama_guru ?></td>
-                        <td><?php echo $u->nip ?></td>
-                        <td><?php echo $u->bidang ?></td>
-                        <td><?php echo $u->sertifikasi_guru ?></td>
-                        <td><?php echo $u->sts_pegawai ?></td>
-                        <td><?php echo $u->alamat ?></td>
-                </tr>
-        <?php } ?>
+<table class = "table table-condensed">
+	<tr>
+		<th>npsn</th>
+		<th>Nama Sekolah</th>
+		<th>laki-laki</th>
+		<th>perempuan</th>
+		<th>JUmlah</th>
+	</tr>
+	<?php
+		foreach ($siswa->result() as $row) {
+	?>
+	<tr>
+		<td><?php echo $row->npsn ?></td>
+		<td><?php echo $row->nama_sekolah ?></td>
+		<td><?php echo $row->jumlah_putra ?></td>
+		<td><?php echo $row->jumlah_putri ?></td>
+		<td><?php echo $row->jumlah_siswa ?></td>
+	</tr>
+	<?php } ?>
+	
 </table>
 
-</body>
-</html>
+
+ <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+

@@ -174,8 +174,33 @@
 			return $this->db->query('select p.jenjang, ifnull(sum(s.jumlah_putra), 0) as jumlah_putra, ifnull(sum(s.jumlah_putri), 0) as jumlah_putri,  ifnull(sum(s.jumlah_siswa), 0) as jumlah_siswa FROM profil p left outer join siswa s on p.npsn=s.npsn and p.kec in ('.$kec.') group by p.jenjang');
 		}
 
+		function getsiswajenjang($kec,$jenjang){
+			return $this->db->query('select p.npsn, p.nama_sekolah, ifnull(s.jumlah_putra, 0) as jumlah_putra, ifnull(s.jumlah_putri, 0) as jumlah_putri,  ifnull(s.jumlah_siswa, 0) as jumlah_siswa FROM profil p left outer join siswa s on p.npsn=s.npsn where p.kec in ('.$kec.') and p.jenjang in ("'.$jenjang.'")');
+		}
 
 
+		function getkec($kec){
+			$this->db->select('*');
+			$this->db->from('kecamatan');
+			$this->db->where('kode_kec',$kec);
+			return $this->db->get();
+		}
+
+		function getprofilsekolah(){
+			$this->db->select('p.visi, p.misi, p.npsn, p.nama_sekolah, p.alamat, k.kepala_sekolah, w.wakil_kepala, p.email, p.telepon, s.jumlah_putra, s.jumlah_putri, s.jumlah_siswa ');
+			$this->db->from('profil p');
+			$this->db->join('kepsek k','p.npsn=k.npsn');
+			$this->db->join('wakasek w','k.npsn=w.npsn');
+			$this->db->join('siswa s','w.npsn=s.npsn');
+			$this->db->where('p.npsn','20363279');
+			return $this->db->get();
+		}
+
+		function update_data($where,$data,$table){
+			$this->db->where($where);
+			$this->db->update($table,$data);
+
+		}
 	}
 
 ?>

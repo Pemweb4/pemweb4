@@ -36,7 +36,7 @@
             $row=$this->uri->segment(3);
         ?>
         
-
+        <center><h2>DATA GURU</h2></center>
         <!-- Back To Top -->
         <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
 

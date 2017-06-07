@@ -31,6 +31,7 @@ class sekolah extends CI_Controller  {
 		$this->load->view('templates/header');
 
 		$this->load->view('pages/index', $data); //menampilkan view 'products_view' dan juga passing data dengan nama $data(Bentuknya array) yang berisi 'listProducts'
+		$this->load->view('templates/footer');
 
 	}
 
@@ -44,9 +45,12 @@ class sekolah extends CI_Controller  {
 
 		$data['jumlahguru'] = $this->sekolah_model->getdataguru($kec);
 
+		$data['namakec'] = $this->sekolah_model->getkec($kec);
+
 		$this->load->view('templates/header');
 
 		$this->load->view('pages/v_kec',$data);
+		$this->load->view('templates/footer');
 
 	}
 
@@ -70,6 +74,8 @@ class sekolah extends CI_Controller  {
 
 		$this->load->view('pages/v_s',$data);
 
+		$this->load->view('templates/footer');
+
 	}
 
 
@@ -90,6 +96,8 @@ class sekolah extends CI_Controller  {
 
 		$this->load->view('pages/v_s_guru',$data);
 
+		$this->load->view('templates/footer');
+
 	}
 
 
@@ -103,6 +111,8 @@ class sekolah extends CI_Controller  {
 		$data['profil'] = $this->sekolah_model->getprofil($npsn);
 
 		$this->load->view('v_profil',$data);
+
+		$this->load->view('templates/footer');
 
 	}
 
@@ -118,7 +128,9 @@ class sekolah extends CI_Controller  {
 
 		$this->load->view('templates/header');
 
-		$this->load->view('v_guru_kec',$data);
+		$this->load->view('pages/v_guru_kec',$data);
+
+		$this->load->view('templates/footer');
 
 	}
 
@@ -134,29 +146,64 @@ class sekolah extends CI_Controller  {
 
 		$this->load->view('pages/v_guru_profil',$data);
 
+		$this->load->view('templates/footer');
+
 	}
 
 	function siswa_kec(){
 		$kec = $this->uri->segment(3);
 
 		$data['siswa'] = $this->sekolah_model->getsiswa($kec);
-
+		$this->load->view('templates/header');
 		$this->load->view('v_murid_kec', $data);
+		$this->load->view('templates/footer');
 	}
 
+	function sekolah_kec_siswa(){
 
+		$kec = $this->uri->segment(3);
+		$jenjang = $this->uri->segment(4);
 
-	public function addAnggota()
-
-	{
-
-		//Function yang dipanggil ketika ingin melakukan add produk kemudian menampilkan add_product_view
-
-		$this->load->view('add_anggota_view');
+		$data['siswa'] = $this->sekolah_model->getsiswajenjang($kec, $jenjang);
+		$this->load->view('templates/header');
+		$this->load->view('pages/sekolah_kec_siswa', $data);
+		$this->load->view('templates/footer');
 
 	}
 
+	function adminsekolah(){
 
+		$data['datasekolah']=$this->sekolah_model->getprofilsekolah();
+		$this->load->view('pages/adminsekolah', $data);
+	}
+
+	function update(){
+		$visi = $this->input->post('npsn');
+		$visi = $this->input->post('visi');
+		$misi = $this->input->post('misi');
+		$kepsek = $this->input->post('kepsek');
+		$wakasek = $this->input->post('wakasek');
+		$alamat = $this->input->post('alamat');
+		$email = $this->input->post('email');
+		$telepon = $this->input->post('telepon');
+		$jlk = $this->input->post('jlk');
+		$jpr = $this->input->post('jpr');
+		$js = $this->input->post('js');
+
+		$data = array(
+			'visi' => $visi,
+			'misi' => $misi,
+			'alamat' => $alamat,
+			'email' => $email,
+			'telepon' => $telepon,
+		);
+
+		$where = array(
+			'npsn' => $npsn
+		);
+
+		$this->sekolah_model->update_data($where,$data,'profil');
+	}
 
 }
 
